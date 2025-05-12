@@ -1,0 +1,109 @@
+# 📘 Instruções para Rodar a API Flask com Upload e Download de CSV
+
+## ✅ Pré-requisitos
+- Python 3 instalado: https://www.python.org/downloads/
+- Um editor de texto ou VS Code
+- Terminal (CMD, PowerShell ou terminal do VS Code)
+
+---
+
+## 1️⃣ Abrir o projeto
+
+1. Extraia o conteúdo do arquivo .zip
+2. Abra a pasta `meu_projeto_api` no VS Code ou terminal
+
+---
+
+## 2️⃣ Criar e ativar o ambiente virtual
+
+### No terminal (CMD ou PowerShell):
+
+```bash
+python -m venv venv
+```
+
+### Ativar:
+
+- **PowerShell:**
+```bash
+.
+env\Scripts\Activate.ps1
+```
+
+- **CMD:**
+```bash
+venv\Scripts\activate.bat
+```
+
+---
+
+## 3️⃣ Instalar dependências
+
+Com o ambiente virtual ativado, execute:
+
+```bash
+pip install flask flask-cors
+```
+
+---
+
+## 4️⃣ Rodar o back-end (API Flask)
+
+No terminal:
+
+```bash
+python app.py
+```
+
+Você verá:
+```
+ * Running on http://127.0.0.1:5000/
+```
+
+Deixe esse terminal aberto.
+
+---
+
+## 5️⃣ Rodar o front-end (interface HTML)
+
+Abra **outro terminal** e execute:
+
+```bash
+python -m http.server 8000
+```
+
+---
+
+## 6️⃣ Usar no navegador
+
+Abra o navegador e acesse:
+
+```
+http://localhost:8000/index.html
+```
+
+### Ações disponíveis:
+- 📤 Upload: selecione um arquivo `.csv` e clique em **Enviar**
+- 📥 Download: digite o nome (ex: `exemplo.csv`) e clique em **Baixar**
+
+---
+
+## 🛑 Encerrar os servidores
+
+Para parar o Flask ou o servidor HTML, use `Ctrl + C` no terminal onde estiverem rodando.
+
+---
+
+## 📁 Estrutura esperada
+
+```
+meu_projeto_api/
+├── app.py
+├── index.html
+├── uploads/
+└── venv/
+```
+
+---
+
+Pronto! Agora você e seu grupo já podem enviar e baixar arquivos CSV via API Flask!
